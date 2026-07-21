@@ -1,0 +1,12 @@
+* text=auto
+
+# Linux, Docker, and Maven files
+mvnw text eol=lf
+*.sh text eol=lf
+Dockerfile text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Windows command files
+*.cmd text eol=crlf
+*.bat text eol=crlf

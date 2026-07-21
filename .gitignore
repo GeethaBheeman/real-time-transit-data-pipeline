@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Java and Maven build artifacts
+**/target/
+*.class
+*.jar
+*.war
+hs_err_pid*
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+
+# Logs and runtime files
+*.log
+*.tmp
+
+# Local database storage
+mysql-data/
+mongo-data/
+data/mysql/
+data/mongodb/
+
+# Generated analytical files
+data.json
+data.txt
+mbta.csv
+
+# Project submission documents
+*.docx
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
