@@ -53,41 +53,11 @@ The project demonstrates:
 
 ## Architecture
 
-```text
-                         MBTA Vehicle REST API
-                                    │
-                                    ▼
-                         Python MBTA API Client
-                                    │
-                       Parse and transform JSON
-                                    │
-                                    ▼
-                          MySQL Transit Database
-                                    │
-                    ┌───────────────┴───────────────┐
-                    │                               │
-                    ▼                               ▼
-          Flask Web Application             Debezium CDC Engine
-                    │                               │
-                    ▼                               ▼
-           Mapbox Visualization          Java Spring Boot Listener
-                                                    │
-                                                    ▼
-                                                 MongoDB
-                                                    │
-                                                    ▼
-                                      Java CDC Validation Client
+The architecture below illustrates the complete data flow from MBTA API ingestion through MySQL storage, Flask visualization, Debezium Change Data Capture, MongoDB replication, Java validation, and Jupyter Notebook analytics.
 
-                          MySQL Historical Data
-                                    │
-                                    ▼
-                         Jupyter Notebook Analysis
-                                    │
-                                    ▼
-                  Route Time, Speed, and Visualizations
-```
+![Real-Time Transit Data Pipeline Architecture](docs/images/transit-pipeline-architecture.png)
 
-All database and CDC services communicate through the custom Docker network named `MBTANetwork`.
+The solid blue arrows represent application data flow, while the green dashed arrows represent Change Data Capture events.
 
 ## Data Pipeline Workflow
 
