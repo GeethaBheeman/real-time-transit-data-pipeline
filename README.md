@@ -65,7 +65,7 @@ The application processes transit data through the following stages:
 
 1. Calls the MBTA REST API for Route 1 vehicle information.
 2. Parses the returned JSON response using Python.
-3. extracts vehicle identification, location, status, trip, and timestamp data.
+3. Extracts vehicle identification, location, status, trip, and timestamp data.
 4. Inserts the transformed vehicle records into the MySQL `mbta_buses` table.
 5. Periodically refreshes the bus data using the Flask application timer.
 6. Retrieves bus coordinates from MySQL.
@@ -703,11 +703,7 @@ The project produces:
 
 ## Project Screenshots
 
-Create the following folder in the repository:
-
-```text
-docs/images/
-```
+The following screenshots document the major components and successful execution of the transit data pipeline.
 
 ### MySQL Transit Table
 
